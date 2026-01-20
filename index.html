@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f8fafc,#eef2ff);color:#0f172a}
+    .app{max-width:1100px;width:100%;padding:24px}
+    .card{background:#ffffff;border:1px solid #e5e7eb;border-radius:22px;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+    .card-pad{padding:28px}
+    h1{margin:0 0 16px}
+    h2{margin:0 0 12px}
+    p{color:#475569}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:12px}
+    .btn{border:0;border-radius:14px;padding:14px 18px;cursor:pointer;background:#0ea5e9;color:white;font-weight:600}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+    .btn-outline{background:#f1f5f9;color:#0f172a;border:1px solid #e5e7eb}
+      .btn:hover{background:#0284c7;transform:translateY(-1px);box-shadow:0 10px 20px rgba(2,132,199,.25)}
+    .btn-outline:hover{background:#e2e8f0;transform:translateY(-1px);box-shadow:0 10px 20px rgba(15,23,42,.12)}
+    .input:focus{outline:none;border-color:#0ea5e9;box-shadow:0 0 0 3px rgba(14,165,233,.15)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 30px 60px rgba(15,23,42,.12)}
+    .card{transition:.3s}
+    .btn,.btn-outline,.input{transition:.25s}
+  </style>
+</head>
+<body>
+  <div class="app card card-pad">
+    <h1>Welcome</h1>
+    <p>Login or create your account below</p>
+
+    <div class="grid">
+      <!-- LOGIN -->
+      <div>
+        <h2>Login</h2>
+        <input class="input" placeholder="Email" />
+        <input class="input" type="password" placeholder="Password" />
+        <div class="row">
+          <input class="input" placeholder="Security Question" />
+          <input class="input" placeholder="Security Answer" />
+        </div>
+      </div>
+
+      <!-- REGISTER -->
+      <div>
+        <h2>Register</h2>
+        <div class="row">
+          <input class="input" placeholder="First Name" />
+          <input class="input" placeholder="Last Name" />
+        </div>
+        <input class="input" placeholder="Email" />
+        <input class="input" placeholder="Phone Number" />
+        <div class="row">
+          <input class="input" type="password" placeholder="Password" />
+          <input class="input" type="password" placeholder="Confirm Password" />
+        </div>
+        <div class="row">
+          <input class="input" placeholder="Security Question" />
+          <input class="input" placeholder="Security Answer" />
+        </div>
+      </div>
+    </div>
+
+    <!-- PARALLEL ACTION BUTTONS (BALANCED) -->
+    <div class="actions">
+      <button class="btn">Login</button>
+      <button class="btn btn-outline">Create Account</button>
+    </div>
+  </div>
+</body>
+</html>
